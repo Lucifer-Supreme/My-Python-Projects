@@ -14,7 +14,7 @@ def write_to_file(key):
         key_data = '\n'
     if key_data == 'Key.cmd':
         key_data = ' *CMD BUTTON* '
-    if key_data == 'Key.shift':
+    if key_data == 'Key.shift' or 'Key.shift_r':
         key_data = ' *SHIFT* '
     if key_data == 'Key.ctrl_l':
         key_data = ' *CTRL-l* '
