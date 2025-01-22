@@ -42,7 +42,7 @@ def search_and_copy(keywords, search_directory, destination_folder):
 #keywords_input = input("Enter keywords to search for, separated by commas (e.g., important, hidden): ")
 keywords = ["important","hidden"]
 
-destination = "Copied"
+destination = "Creepy_Crawly/Copied"
 
 # Assuming the search directory is the C drive
 search_directory = "C:\\"

