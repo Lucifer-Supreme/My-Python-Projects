@@ -1,9 +1,11 @@
 import requests
+import time
 
 def forecast_write(date,city,temp,condition):
     filename = "Weather Forecast api\\Weather forecast data.txt"
     with open(filename,'a') as file:
         file.write(f"\nDate - {date}, City - {city}, Temperature - {temp}, Condition - {condition}")
+        time.sleep(0.2)
     
 def clear_data():
     filename = "Weather Forecast api\\Weather forecast data.txt"
@@ -15,7 +17,7 @@ def get_weather_forecast(city_name, api_key='3ab817b814da587b58f0254154ff38db'):
     r = requests.get(url)
 
     data = r.json()
-    forecasts = data['list']  # Renamed to avoid confusion
+    forecasts = data['list']  
 
     for forecast in forecasts:  # Iterate over the list properly
         main = forecast['main']
@@ -25,7 +27,7 @@ def get_weather_forecast(city_name, api_key='3ab817b814da587b58f0254154ff38db'):
         
 # Test the function
 action = input("Get weather forecast (get) / Clear history (clear) -")
-if (action=="get"):
+if (action.lower()=="get"):
     city_name = input("Enter the city name -")
     get_weather_forecast(city_name)
 
